@@ -1,8 +1,7 @@
 ---
 services: 
-
   mysql: 
-    image: mysql
+    image: mysql/mysql-server:8.0.17
     platform: linux/x86_64
     volumes:
       - ./mysql/data:/var/lib/mysql
@@ -34,4 +33,4 @@ services:
       - ./fleet/vulndb:/vulndb
 volumes: 
   data01:
-    driver: local
+    driver: local 
